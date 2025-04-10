@@ -1,7 +1,4 @@
-import buildutils.configureDetekt
-import buildutils.configureDiktat
-import buildutils.createDetektTask
-import buildutils.createDiktatTask
+
 
 group = rootProject.group
 version = rootProject.version
@@ -26,10 +23,8 @@ dependencies {
             useJUnitPlatform()
     }
 
-    configureDiktat()
-    configureDetekt()
+
+
 
 }
 
-createDiktatTask()
-createDetektTask()
