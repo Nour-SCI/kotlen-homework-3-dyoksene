@@ -12,17 +12,13 @@ dependencies {
     testImplementation(libs.junit)
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.9.0")
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.9.0")
-    runtimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
 
 
 
     tasks.test {
-        useJUnitPlatform {
-            includeTags("fast", "smoke & feature-a")
-            // excludeTags("slow", "ci")
-            includeEngines("junit-jupiter")
-            // excludeEngines("junit-vintage")
-        }
+
+            useJUnitPlatform()
     }
 
 
