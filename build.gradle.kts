@@ -8,6 +8,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id(libs.plugins.kotlin.jvm.get().pluginId)
     alias(libs.plugins.buildconfig) apply false
+
 }
 
 group = "org.example"
@@ -18,11 +19,11 @@ allprojects {
         mavenCentral()
     }
 
-    dependencies {
-        implementation("org.junit.jupiter:junit-jupiter-api:5.9.0")
-        runtimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
-        runtimeOnly("org.junit.platform:junit-platform-console:1.9.0")
-    }
+//    dependencies {
+//        implementation("org.junit.jupiter:junit-jupiter-api:5.9.0")
+//        runtimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
+//        runtimeOnly("org.junit.platform:junit-platform-console:1.9.0")
+//    }
 
     tasks.withType<KotlinCompile> {
         kotlinOptions.jvmTarget = "1.8"
