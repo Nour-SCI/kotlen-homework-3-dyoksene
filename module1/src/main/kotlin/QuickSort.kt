@@ -6,10 +6,10 @@ fun <T : Comparable<T>> quickSort(items: List<T>): List<T> {
         return items
     }
     val pivot = items[items.size / 2]
-//    val equal = items.filter { it == pivot }
+    val equal = items.filter { it == pivot }
     val less = items.filter { it < pivot }
     val greater = items.filter { it > pivot }
-//    return quickSort(less) + equal + quickSort(greater)
+   // return quickSort(less) + equal + quickSort(greater)
     return quickSort(less) + quickSort(greater)
 }
 
